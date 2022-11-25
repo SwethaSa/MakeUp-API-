@@ -1,0 +1,171 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url(https://i.pinimg.com/originals/e8/58/39/e858398168cd6e482fd4f5e8782180fe.jpg);
+  background-size: contain;
+}
+
+* {
+  box-sizing: border-box;
+}
+h1 {
+  color: white;
+  margin-bottom: 30px;
+  font-weight: bolder;
+  text-shadow: 3px 3px 6px red;
+}
+.container {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(172, 161, 161, 0.527);
+  animation-name: container;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  border-radius: 30px;
+}
+@keyframes container {
+  0% {
+    background-color: rgba(122, 113, 113, 0.5);
+  }
+  20% {
+    background-color: rgba(163, 143, 143, 0.5);
+  }
+  40% {
+    background-color: rgba(221, 189, 189, 0.5);
+  }
+  60% {
+    background-color: rgba(248, 130, 130, 0.5);
+  }
+  80% {
+    background-color: rgba(252, 119, 119, 0.5);
+  }
+  100% {
+    background-color: rgba(245, 45, 45, 0.5);
+  }
+}
+
+#makeUpProducts {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.items {
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 3px;
+  padding: 20px;
+  display: -ms-grid;
+  grid-template-columns: 3fr 1fr;
+  text-align: left;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+  text-orientation: sideways-right;
+  border-radius: 30px;
+}
+
+.label {
+  overflow-wrap: break-word;
+}
+.desc {
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+
+.items > img {
+  height: 200px;
+  width: 200px;
+  overflow-anchor: initial;
+  transition: width 1s, height 1s, transform 1s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  font-style: italic;
+  font-weight: 600;
+  color: crimson;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+img:hover {
+  width: 175px;
+  height: 175px;
+  transform: scale(2);
+}
+
+a:link {
+  color: mediumvioletred;
+  text-decoration: none;
+}
+
+a:visited {
+  color: indianred;
+  text-decoration: none;
+}
+
+a:hover {
+  color: crimson;
+  text-decoration: underline;
+}
+
+#search {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid rgba(247, 147, 147, 0);
+  padding: 5px 10px;
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 25px;
+}
+
+::placeholder {
+  color: black;
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+}
+
+input {
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+}
+
+#searchWrapper {
+  position: relative;
+}
+
+#searchWrapper::after {
+  content: "🔍";
+  position: absolute;
+  margin-top: 10px;
+  top: 7px;
+  right: 15px;
+}
+
+@media only screen and (max-width: 420px) {
+  .container {
+    display: initial;
+    background-color: rgba(184, 135, 11, 0);
+    animation-name: none;
+    animation-duration: 0s;
+    animation-iteration-count: none;
+  }
+
+  .items {
+    background-color: rgba(248, 130, 130, 0.5);
+    margin-right: 18px;
+  }
+  #search {
+    background-color: rgba(248, 130, 130, 0.5);
+  }
+  #searchWrapper::after {
+    content: none;
+  }
+}
